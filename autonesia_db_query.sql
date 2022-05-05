@@ -2,6 +2,7 @@ CREATE DATABASE db_Autonesia
 
 USE db_Autonesia
 
+--CHAR can be used for Primary Keys and IDs since those are string characters, and therefore can be used (except for Item Code)--
 CREATE TABLE GoodsReceived
 (
 	GoodsReceivedNo		CHAR(5) NOT NULL PRIMARY KEY,
@@ -17,7 +18,7 @@ CREATE TABLE PurchaseOrder
 (
 	PO_No				CHAR(5)		NOT NULL PRIMARY KEY,
 	OrderType			VARCHAR(25)	NOT NULL,
-	ItemCode			CHAR(5)		NOT NULL,
+	ItemCode			VARCHAR(50)		NOT NULL,
 	FOREIGN KEY			(ItemCode) REFERENCES Item,
 	Ordered				INT			NOT NULL,
 	Received			INT			NOT NULL
@@ -40,7 +41,7 @@ CREATE TABLE SalesOrder
 	InvoiceNo			CHAR(5)		NOT NULL,
 	PickingListNumber	CHAR(5)		NOT NULL
 )
-
+--Based on the Excel table, the Item Code uses variations of characters of more than 5, therefore VARCHAR(50) is appropriate for this case--
 CREATE TABLE Item
 (
 	ItemCode		VARCHAR(50)		NOT NULL PRIMARY KEY,
@@ -53,7 +54,7 @@ CREATE TABLE Item
 
 CREATE TABLE Stock
 (
-	MainLocation	VARCHAR(50)		NOT NULL PRIMARY KEY,
+	MainLocation	CHAR(5)			NOT NULL PRIMARY KEY,
 	WarehouseGroup	VARCHAR(50)		NOT NULL,
 	ItemCode		CHAR(5)			NOT NULL,
 	Available		VARCHAR(50)		NOT NULL,
@@ -61,7 +62,7 @@ CREATE TABLE Stock
 
 CREATE TABLE Supplier
 (
-	SupplierCode	INT				NOT NULL PRIMARY KEY,
+	SupplierCode	CHAR(5)			NOT NULL PRIMARY KEY,
 	SupplierName	VARCHAR(25)		NOT NULL,
 	SupplierAddress VARCHAR(50)		NOT NULL,
 	SupplierPhone	INT				NOT NULL,
