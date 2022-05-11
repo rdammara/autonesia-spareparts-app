@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutonesiaApp.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace AutonesiaApp
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //inventoryButton.Image = Resources.icons8-collapse-arrow-24;
+            inventoryButton.Image = Resources.icons8_collapse_arrow_24;
             if (isCollapsed)
             {
                 panelDropDown.Height += 10;
@@ -37,6 +38,7 @@ namespace AutonesiaApp
             }
             else
             {
+                inventoryButton.Image = Resources.icons8_expand_arrow_24;
                 panelDropDown.Height -= 10;
                 if (panelDropDown.Size == panelDropDown.MinimumSize)
                 {
