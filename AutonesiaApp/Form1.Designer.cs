@@ -33,11 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(185, 262);
+            this.buttonLogin.Location = new System.Drawing.Point(128, 262);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 0;
@@ -77,11 +78,22 @@
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 4;
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(230, 262);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 5;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 389);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -101,5 +113,6 @@
         private Label label2;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button cancelButton;
     }
 }

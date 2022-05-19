@@ -17,3 +17,11 @@ D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Deb
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\ref\AutonesiaApp.dll
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.pdb
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.genruntimeconfig.cache
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.Form2.resources
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.csproj.CopyComplete
