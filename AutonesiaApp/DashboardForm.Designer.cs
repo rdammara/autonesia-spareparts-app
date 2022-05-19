@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.inventoryButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.panelDropDown.SuspendLayout();
@@ -42,6 +43,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.panelDropDown);
+            this.flowLayoutPanel1.Controls.Add(this.comboBox1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(212, 590);
@@ -93,6 +95,14 @@
             this.inventoryButton.UseVisualStyleBackColor = true;
             this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 80);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 23);
+            this.comboBox1.TabIndex = 1;
+            // 
             // timer1
             // 
             this.timer1.Interval = 15;
@@ -120,5 +130,6 @@
         private Button button2;
         private Button inventoryButton;
         private System.Windows.Forms.Timer timer1;
+        private ComboBox comboBox1;
     }
 }
