@@ -101,6 +101,7 @@
             this.Controls.Add(this.buttonLogin);
             this.Name = "LoginForm";
             this.Text = "Autonesia - Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

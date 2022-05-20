@@ -50,5 +50,10 @@ namespace AutonesiaApp
         {
             this.Close();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+        }
     }
 }
