@@ -1,6 +1,6 @@
 ﻿namespace AutonesiaApp
 {
-    partial class LoginForm
+    partial class FormLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -88,7 +88,7 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // LoginForm
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonLogin);
-            this.Name = "LoginForm";
+            this.Name = "FormLogin";
             this.Text = "Autonesia - Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

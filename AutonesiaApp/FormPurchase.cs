@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AutonesiaApp
 {
-    public partial class Form2 : Form
+    public partial class FormPurchase : Form
     {
-        public Form2()
+        public FormPurchase()
         {
             InitializeComponent();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
