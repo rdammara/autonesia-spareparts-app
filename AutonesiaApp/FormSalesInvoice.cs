@@ -17,6 +17,8 @@ namespace AutonesiaApp
         private SqlCommand cmd;
         private DataSet ds;
         private SqlDataAdapter da;
+        private SqlDataReader dr;
+        private DataTable dt;
 
         Connections Konn = new Connections();
         public FormSalesInvoice()
@@ -48,26 +50,69 @@ namespace AutonesiaApp
             }
         }
 
-        void pilihan()
+        void tampilSalesmanCode()
         {
-            comboBox1.Items.Add("SS001");
-            comboBox1.Items.Add("SS002");
-            comboBox1.Items.Add("SS003");
-            comboBox1.Items.Add("SS004");
-            comboBox1.Items.Add("SS005");
-            comboBox1.Items.Add("SS006");
-
+            SqlConnection conn = Konn.GetConn();
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("SELECT SalesmanCode FROM Salesman", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("SalesmanCode", typeof(string));
+                dt.Load(dr);
+                comboBox1.ValueMember = "SalesmanCode";
+                comboBox1.DataSource = dt;
+                
+            }
+            catch (Exception G)
+            {
+                MessageBox.Show(G.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+
+        void tampilCustomerCode()
+        {
+            SqlConnection conn = Konn.GetConn();
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("SELECT CustCode FROM Customer", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("CustCode", typeof(string));
+                dt.Load(dr);
+                comboBox2.ValueMember = "CustCode";
+                comboBox2.DataSource = dt;
+
+            }
+            catch (Exception G)
+            {
+                MessageBox.Show(G.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
             tampilData();
-            pilihan();
+            tampilSalesmanCode();
+            tampilCustomerCode();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "" || dateTimePicker1.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" || textBox6.Text.Trim() == "" || textBox7.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "" || dateTimePicker1.Text.Trim() == "" ||  textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" ||  textBox7.Text.Trim() == "")
             {
                 MessageBox.Show("Data Yang di Masukan Belum Lengkap!");
             }
@@ -76,7 +121,7 @@ namespace AutonesiaApp
                 SqlConnection conn = Konn.GetConn();
                 try
                 {
-                    cmd = new SqlCommand("INSERT INTO Invoice VALUES ('" + textBox1.Text + "', '" + this.dateTimePicker1.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "','" + textBox7.Text + "')", conn);
+                    cmd = new SqlCommand("INSERT INTO Invoice VALUES ('" + textBox1.Text + "', '" + this.dateTimePicker1.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox7.Text + "')", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Data Telah Berhasil Dibuat");
@@ -98,10 +143,10 @@ namespace AutonesiaApp
                     DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                     textBox1.Text = row.Cells["InvoiceNo"].Value.ToString();
                     dateTimePicker1.Text = row.Cells["InvoiceDate"].Value.ToString();
-                    textBox3.Text = row.Cells["CustCode"].Value.ToString();
+                    
                     textBox4.Text = row.Cells["ItemCode"].Value.ToString();
                     textBox5.Text = row.Cells["Qty"].Value.ToString();
-                    textBox6.Text = row.Cells["SalesmanCode"].Value.ToString();
+                    
                     textBox7.Text = row.Cells["PickingListNumber"].Value.ToString();
                 }
                 catch (Exception X)
@@ -112,7 +157,7 @@ namespace AutonesiaApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "" || dateTimePicker1.Text.Trim() == "" || textBox3.Text.Trim() == "" || textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" || textBox6.Text.Trim() == "" || textBox7.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "" || dateTimePicker1.Text.Trim() == "" ||  textBox4.Text.Trim() == "" || textBox5.Text.Trim() == "" ||  textBox7.Text.Trim() == "")
             {
                 MessageBox.Show("Data Yang di Masukan Belum Lengkap!");
             }
@@ -121,7 +166,7 @@ namespace AutonesiaApp
                 SqlConnection conn = Konn.GetConn();
                 try
                 {
-                    cmd = new SqlCommand("UPDATE Invoice SET InvoiceDate = '" + this.dateTimePicker1.Text + "', CustCode ='" + textBox3.Text + "', ItemCode ='" + textBox4.Text + "', Qty ='" + textBox5.Text + "',  SalesmanCode ='" + textBox6.Text + "', PickingListNumber ='" + textBox7.Text + "' WHERE InvoiceNo = '" + textBox1.Text + "'", conn);
+                    cmd = new SqlCommand("UPDATE Invoice SET InvoiceDate = '" + this.dateTimePicker1.Text + "', ItemCode ='" + textBox4.Text + "', Qty ='" + textBox5.Text + "', PickingListNumber ='" + textBox7.Text + "' WHERE InvoiceNo = '" + textBox1.Text + "'", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Update Data Telah Berhasil!");
@@ -157,10 +202,10 @@ namespace AutonesiaApp
             FormSalesPrint frm2 = new FormSalesPrint();
             frm2.invoice = textBox1.Text;
             frm2.date = dateTimePicker1.Text;
-            frm2.customer = textBox3.Text;
+            frm2.customer = comboBox1.Text;
             frm2.item = textBox4.Text;
             frm2.qty = textBox5.Text;
-            frm2.salesman = textBox6.Text;
+            frm2.salesman = comboBox2.Text;
             frm2.pickinglist = textBox7.Text;
             frm2.ShowDialog();
         }
