@@ -1,6 +1,6 @@
 ﻿namespace AutonesiaApp
 {
-    partial class Form2
+    partial class FormDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,8 @@
             this.reportsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.createAReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,8 @@
             this.dashboardMenu,
             this.inventoryMenu,
             this.salesMenu,
-            this.reportsMenu});
+            this.reportsMenu,
+            this.customersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -72,26 +75,26 @@
             // myHomeToolStripMenuItem
             // 
             this.myHomeToolStripMenuItem.Name = "myHomeToolStripMenuItem";
-            this.myHomeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.myHomeToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.myHomeToolStripMenuItem.Text = "My Home";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -129,6 +132,7 @@
             this.createASalesQuoteToolStripMenuItem.Name = "createASalesQuoteToolStripMenuItem";
             this.createASalesQuoteToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.createASalesQuoteToolStripMenuItem.Text = "Create a Sales Quote";
+            this.createASalesQuoteToolStripMenuItem.Click += new System.EventHandler(this.createASalesQuoteToolStripMenuItem_Click);
             // 
             // reportsMenu
             // 
@@ -154,7 +158,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
             // 
-            // Form2
+            // customersToolStripMenuItem
+            // 
+            this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewCustomerToolStripMenuItem});
+            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
+            this.customersToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.customersToolStripMenuItem.Text = "Customers";
+            // 
+            // addNewCustomerToolStripMenuItem
+            // 
+            this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
+            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewCustomerToolStripMenuItem.Text = "Manage Customers";
+            this.addNewCustomerToolStripMenuItem.Click += new System.EventHandler(this.addNewCustomerToolStripMenuItem_Click);
+            // 
+            // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form2";
+            this.Name = "FormDashboard";
             this.Text = "Form2";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -187,5 +206,7 @@
         private ToolStripMenuItem logOutToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private Label label1;
+        private ToolStripMenuItem customersToolStripMenuItem;
+        private ToolStripMenuItem addNewCustomerToolStripMenuItem;
     }
 }

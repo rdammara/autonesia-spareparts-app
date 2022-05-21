@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 namespace AutonesiaApp
 {
-    public partial class LoginForm : Form
+    public partial class FormLogin : Form
     {
         private SqlCommand cmd;
         private DataSet ds;
@@ -16,12 +16,12 @@ namespace AutonesiaApp
         private SqlDataReader dr;
 
         Connections Konn = new Connections();
-        public LoginForm()
+        public FormLogin()
         {
             InitializeComponent();
         }
         private Form Form1;
-        private Form Form2;
+        private Form FormDashboard;
         private void buttonLogin_Click(object sender, EventArgs e)
         {
          
@@ -35,7 +35,7 @@ namespace AutonesiaApp
                 reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    Form2 dashboard = new Form2();
+                    FormDashboard dashboard = new FormDashboard();
                     dashboard.Show();
                     this.Hide();
                 }

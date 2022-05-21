@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace AutonesiaApp
 {
-    public partial class Form2 : Form
+    public partial class FormDashboard : Form
     {
         
-        public Form2()
+        public FormDashboard()
         {
             InitializeComponent();
         }
@@ -26,6 +26,18 @@ namespace AutonesiaApp
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void createASalesQuoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var salesForm = new FormSalesInvoice();
+            salesForm.Show();
+        }
+
+        private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var customerForm = new FormCustomer();
+            customerForm.Show();
         }
     }
 }
