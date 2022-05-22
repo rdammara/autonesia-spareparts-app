@@ -5,7 +5,6 @@ D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Deb
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\ref\AutonesiaApp.dll
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\bin\Debug\net6.0-windows\AutonesiaApp.pdb
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.csproj.AssemblyReference.cache
-D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.DashboardForm.resources
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.Properties.Resources.resources
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.csproj.GenerateResource.cache
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -29,3 +28,4 @@ D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Deb
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.FormSalesInvoice.resources
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.FormSalesPrint.resources
 D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.FormCustomer.resources
+D:\School Stuff\Visual Programming\autonesia-spareparts-app\AutonesiaApp\obj\Debug\net6.0-windows\AutonesiaApp.FormInventory.resources

@@ -41,10 +41,13 @@
             this.createASalesQuoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.createAReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -112,12 +115,14 @@
             this.purchaseFromVendorToolStripMenuItem.Name = "purchaseFromVendorToolStripMenuItem";
             this.purchaseFromVendorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.purchaseFromVendorToolStripMenuItem.Text = "Purchase from Vendor";
+            this.purchaseFromVendorToolStripMenuItem.Click += new System.EventHandler(this.purchaseFromVendorToolStripMenuItem_Click);
             // 
             // checkInventoryToolStripMenuItem
             // 
             this.checkInventoryToolStripMenuItem.Name = "checkInventoryToolStripMenuItem";
             this.checkInventoryToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.checkInventoryToolStripMenuItem.Text = "Check Inventory";
+            this.checkInventoryToolStripMenuItem.Click += new System.EventHandler(this.checkInventoryToolStripMenuItem_Click);
             // 
             // salesMenu
             // 
@@ -148,16 +153,6 @@
             this.createAReportToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.createAReportToolStripMenuItem.Text = "Create a Report";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome";
-            // 
             // customersToolStripMenuItem
             // 
             this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -169,22 +164,57 @@
             // addNewCustomerToolStripMenuItem
             // 
             this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.addNewCustomerToolStripMenuItem.Text = "Manage Customers";
             this.addNewCustomerToolStripMenuItem.Click += new System.EventHandler(this.addNewCustomerToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::AutonesiaApp.Properties.Resources.autonesia;
+            this.pictureBox1.Location = new System.Drawing.Point(476, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(296, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(150, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 32);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "?";
             // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormDashboard";
-            this.Text = "Form2";
+            this.Text = "Dashboard - Autonesia";
+            this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +238,7 @@
         private Label label1;
         private ToolStripMenuItem customersToolStripMenuItem;
         private ToolStripMenuItem addNewCustomerToolStripMenuItem;
+        private PictureBox pictureBox1;
+        private Label label2;
     }
 }

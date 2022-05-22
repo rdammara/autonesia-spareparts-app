@@ -39,5 +39,22 @@ namespace AutonesiaApp
             var customerForm = new FormCustomer();
             customerForm.Show();
         }
+
+        private void checkInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var inventoryForm = new FormInventory();
+            inventoryForm.Show();
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            label2.Text = Class1.uname; 
+        }
+
+        private void purchaseFromVendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var purchaseForm = new FormPurchase();
+            purchaseForm.Show();
+        }
     }
 }

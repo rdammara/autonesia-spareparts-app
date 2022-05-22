@@ -35,8 +35,10 @@ namespace AutonesiaApp
                 reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    Class1.uname = textBox1.Text;
                     FormDashboard dashboard = new FormDashboard();
                     dashboard.Show();
+                    
                     this.Hide();
                 }
                 else

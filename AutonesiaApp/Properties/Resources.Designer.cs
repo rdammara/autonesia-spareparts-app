@@ -63,6 +63,16 @@ namespace AutonesiaApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap autonesia {
+            get {
+                object obj = ResourceManager.GetObject("autonesia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CollapseButton {
             get {
                 object obj = ResourceManager.GetObject("CollapseButton", resourceCulture);
